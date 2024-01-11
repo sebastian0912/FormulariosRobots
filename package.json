@@ -1,17 +1,40 @@
 {
   "name": "robotsmaikolformulario",
   "version": "1.0.0",
-  "description": "",
+  "description": "Ayuda a los usuarios a llenar formularios de manera automatica",
   "main": "main.js",
+  "repository": "https://github.com/sebastian0912/FormulariosRobots.git",
+  "publish": {
+    "provider": "github",
+    "releaseType": "release"
+  },
+
+  
   "scripts": {
     "dev": "electron .",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dist" : "electron-builder"
+  },
+
+  "build": {
+    "appId": "FormulariosRobotsMaikol",
+    "productName": "FormulariosRobotsMaikol",
+    "win": {
+      "target": "nsis",
+      "icon": "./build/robot.ico"
+    },
+    "directories": {
+      "output": "dist"
+    }
   },
   "keywords": [],
-  "author": "",
+  "author": "Sebastian Guarnizo Campos",
   "license": "ISC",
   "devDependencies": {
-    "electron": "^28.1.3"
+    "electron": "^28.1.3",
+    "electron-builder": "^24.9.1"
+  },
+  "dependencies": {
+    "electron-updater": "^6.1.7"
   }
-
 }
