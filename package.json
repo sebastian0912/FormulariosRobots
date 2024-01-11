@@ -18,8 +18,8 @@
     "productName": "FormulariosRobotsMaikol",
     "win": {
       "target": "nsis",
-      "icon": "build/robot.ico",
-      "publisherName": "Apoyo Laboral"
+      "icon": "./icono/robot.ico",
+      "publisherName": "ApoyoLaboral"
     },
     "directories": {
       "output": "dist"
