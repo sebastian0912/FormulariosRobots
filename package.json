@@ -18,7 +18,7 @@
     "productName": "FormulariosRobotsMaikol",
     "win": {
       "target": "nsis",
-      "icon": "./icono/robot.ico",
+      "icon": "./icono/iconoRobot.ico",
       "publisherName": "ApoyoLaboral"
     },
     "directories": {
