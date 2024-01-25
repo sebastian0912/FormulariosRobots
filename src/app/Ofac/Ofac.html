@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../reset.css" />
+    <link rel="stylesheet" href="Ofac.css" />
+
+    <link href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-minimal@4/minimal.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
+
+    <script defer src="../logOut.js" type="module"></script>
+    <script defer src="Ofac.js" type="module"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.4/xlsx.full.min.js"></script>
+
+</head>
+
+<body>
+
+    <div class="opciones">
+        <ul class="lista-Opciones">
+
+            <li>
+                <a href="../Adres/policivo.html">
+                    <img src="../assets/adres.png" alt="logo" class="logo" />
+                    <p> Adres </p>
+                </a>
+            </li>
+
+
+            <li>
+                <a href="../Policivo/policivo.html">
+                    <img src="../assets/police-folder.png" alt="logo" class="logo" />
+                    <p> Policivos </p>
+                </a>
+            </li>
+
+            <li id="vacantes">
+                <a href="./Ofac.html">
+                    <img src="../assets/ofac.png" alt="logo" class="logo" />
+                    <p> Ofac </p>
+                </a>
+            </li>
+
+            <li id="seleccion">
+                <a href="../Contraloria/Contraloria.html">
+                    <img src="../assets/contraloria.jpg" alt="logo" class="logo" />
+                    <p> Contraloria </p>
+                </a>
+            </li>
+
+            <li id="contratacion">
+                <a href="../Sisben/Sisben.html">
+                    <img src="../assets/sisben.jpg" alt="logo" class="logo" />
+                    <p> Sisben </p>
+                </a>
+            </li>
+
+
+            <li>
+                <a href="../Producaduria/Producaduria.html">
+                    <img src="../assets/Logo_Procuraduria_Colombia.png" alt="logo" class="logo" />
+                    <p> Producaduria </p>
+                </a>
+            </li>
+
+            <li>
+                <a href="../Pension/Pension.html">
+                    <img src="../assets/jubilacion.png" alt="logo" class="logo" />
+                    <p> Fondo pension </p>
+                </a>
+            </li>
+
+            <li>
+                <a href="../Extra/Extra.html">
+                    <img src="../assets/mas.png" alt="logo" class="logo" />
+                    <p> Extra </p>
+                </a>
+            </li>
+
+
+
+            <li id="logout">
+                <img src="../assets/cerrar-sesion.png" alt="logo" class="logo" />
+                <p>Cerrar Sesion</p>
+            </li>
+        </ul>
+    </div>
+
+
+    <header>
+        <div class="cajontitulo">
+            <h1 class="titulo">Bienvenido</h1>
+        </div>
+        <div class="perfil">
+            <h1 clas class="titulo">Hola, <span id="username"></span></h1>
+            <h1 id="perfil" class="titulo"></h1>
+        </div>
+    </header>
+
+    <div class="contenido">
+        <div class="cuadroTexto">
+            <div class="valor">
+                <div class="valoresEscribir">
+                    <h1 class="titulo" style="margin-right: 10px;"> Dilegencie la siguiente información: </h1>
+
+                    <!-- Resto de la información de la verificación OFAC -->
+                    <div>
+                        <input type="text" id="Estado_OFAC" class="input" placeholder="Estado_OFAC">
+                        <input type="text" id="Anotacion_OFAC" class="input" placeholder="Anotacion_OFAC">
+
+                        <!-- Entradas para archivos PDF de la verificación OFAC -->
+                        <div class="archivo">
+                            <input type="file" id="PDF_OFAC" class="boton" accept=".pdf" placeholder="PDF_OFAC">
+                            <button class="input" id="boton_PDF_OFAC" style="width: 315px;">PDF_OFAC</button>
+                        </div>
+                    </div>
+
+
+
+
+
+
+                    <button class=" btn2" id="botonC">Cargar</button>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+</body>
+
+</html>

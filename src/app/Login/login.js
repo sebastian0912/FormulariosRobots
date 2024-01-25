@@ -28,15 +28,11 @@ signInform.addEventListener('submit', async (e) => {
     localStorage.setItem('username', values.primer_nombre + ' ' + values.primer_apellido);
     localStorage.setItem('sede', values.sucursalde);
 
-    const esKarenRiquett = values.primer_nombre === 'KAREN' && values.primer_apellido === "RIQUETT";
-    const esYeseniaPalacios = values.primer_nombre === 'Yesenia' && values.primer_apellido === "Palacios";
 
-
-    if (values.numero_de_documento != null && !esKarenRiquett && !esYeseniaPalacios) {
-        window.location.href = "../Roles/roles.html";
-    } else if (esKarenRiquett || esYeseniaPalacios) {
-        window.location.href = "../Recepcion/recepcion.html";
-    } else {
+    if (values.rol == 'BOT') {
+        window.location.href = "..//Inicio/inicio.html";
+    }
+    else {
         aviso('No tienes acceso todavía, comunícate con el administrador', 'error');
     }
 

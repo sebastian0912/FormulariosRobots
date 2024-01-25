@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../reset.css" />
+    <link rel="stylesheet" href="inicio.css" />
+
+    <link href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-minimal@4/minimal.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
+
+    <script defer src="../logOut.js" type="module"></script>
+    <script defer src="inicio.js" type="module"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.4/xlsx.full.min.js"></script>
+
+</head>
+
+<body>
+
+    <div class="opciones">
+        <ul class="lista-Opciones">
+
+            <li id="logout">
+                <img src="../assets/cerrar-sesion.png" alt="logo" class="logo" />
+                <p>Cerrar Sesion</p>
+            </li>
+            
+        </ul>
+    </div>
+
+
+    <header>
+        <div class="cajontitulo">
+            <h1 class="titulo">Bienvenido</h1>
+        </div>
+        <div class="perfil">
+            <h1 clas class="titulo">Hola, <span id="username"></span></h1>
+            <h1 id="perfil" class="titulo"></h1>
+        </div>
+    </header>
+
+    <div class="contenido">
+        <div class="cuadroTexto">
+            <div class="valor">
+                <div class="valoresEscribir">
+                    <h1 class="titulo" style="margin-right: 10px;"> Dilegencie la siguiente información: </h1>
+
+                    <!-- Resto de la información de dirección -->
+                    <div>
+                        <input type="text" id="Cedula" class="input" placeholder="Numero Cedula">
+                        <!-- Tipo de documento -->
+                        <select id="Tipo_Documento" class="input">
+                            <option value="CC">Cedula</option>
+                            <option value="CE">Cedula de extranjeria</option>
+                            <option value="P">Pasaporte</option>
+
+                        </select>
+
+                    </div>
+
+
+                    <button class=" btn2" id="botonC">Cargar</button>
+
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+</body>
+
+</html>
