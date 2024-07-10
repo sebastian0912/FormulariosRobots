@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -19,7 +20,6 @@
 
     <div class="opciones">
         <ul class="lista-Opciones">
-
             <li>
                 <a href="./policivo.html">
                     <img src="../assets/adres.png" alt="logo" class="logo" />
@@ -27,15 +27,14 @@
                 </a>
             </li>
 
-
-            <li >
+            <li>
                 <a href="../Policivo/policivo.html">
                     <img src="../assets/police-folder.png" alt="logo" class="logo" />
                     <p> Policivos </p>
                 </a>
             </li>
 
-            <li id="vacantes" >
+            <li id="vacantes">
                 <a href="../Ofac/Ofac.html">
                     <img src="../assets/ofac.png" alt="logo" class="logo" />
                     <p> Ofac </p>
@@ -49,36 +48,40 @@
                 </a>
             </li>
 
-            <li id="contratacion" >
+            <li id="contratacion">
                 <a href="../Sisben/Sisben.html">
                     <img src="../assets/sisben.jpg" alt="logo" class="logo" />
                     <p> Sisben </p>
                 </a>
             </li>
 
-
-            <li  >
+            <li>
                 <a href="../Producaduria/Producaduria.html">
                     <img src="../assets/Logo_Procuraduria_Colombia.png" alt="logo" class="logo" />
                     <p> Producaduria </p>
                 </a>
             </li>
 
-            <li >
+            <li>
                 <a href="../Pension/Pension.html">
                     <img src="../assets/jubilacion.png" alt="logo" class="logo" />
                     <p> Fondo pension </p>
                 </a>
             </li>
 
-            <li  >
+            <li>
                 <a href="../Extra/Extra.html">
                     <img src="../assets/mas.png" alt="logo" class="logo" />
                     <p> Extra </p>
                 </a>
             </li>
 
-
+            <li>
+                <a href="../Inicio/inicio.html">
+                    <img src="../assets/house.png" alt="logo" class="logo" />
+                    <p> Home </p>
+                </a>
+            </li>
 
             <li id="logout">
                 <img src="../assets/cerrar-sesion.png" alt="logo" class="logo" />
@@ -87,13 +90,12 @@
         </ul>
     </div>
 
-
     <header>
         <div class="cajontitulo">
             <h1 class="titulo">Bienvenido</h1>
         </div>
         <div class="perfil">
-            <h1 clas class="titulo">Hola, <span id="username"></span></h1>
+            <h1 class="titulo">Hola, <span id="username"></span></h1>
             <h1 id="perfil" class="titulo"></h1>
         </div>
     </header>
@@ -102,39 +104,47 @@
         <div class="cuadroTexto">
             <div class="valor">
                 <div class="valoresEscribir">
-                    <h1 class="titulo" style="margin-right: 10px;"> Dilegencie la siguiente información: </h1>
+                    <h1 class="titulo" style="margin-right: 10px;"> Diligencie la siguiente información: </h1>
 
-
-                    <!-- Resto de la información de dirección -->
-                    <div>
-                        <label for="Tipo_Adress" class="label" >Estado Adres</label>
-                        <input type="text" id="Estado_Adress" class="input" placeholder="Estado_Adress"> <br>
-                        <input type="text" id="Apellido_Adress" class="input" placeholder="Apellido_Adress">
-                        <input type="text" id="Entidad_Adress" class="input" placeholder="Entidad_Adress">
-
-                        <!-- Entradas para archivos PDF -->
-                        <div class="archivo">
-                            <input type="file" id="pdfAdress" class="boton" accept=".pdf" placeholder="PDF_Adress">
-                            <button class="input" id="boton_pdfAdress" style="width: 315px;">PDF_Adress</button>
+                    <!-- Información de dirección -->
+                    <div class="input-group-container">
+                        <div class="input-group">
+                            <label for="Estado_Adress" class="label">Estado Adres</label>
+                            <input type="text" id="Estado_Adress" class="input" placeholder="Estado Adres">
                         </div>
-
-                        <input type="date" id="Fecha_Adress" class="input" placeholder="Fecha_Adress">
-                        
+                        <div class="input-group">
+                            <label for="Apellido_Adress" class="label">Apellido Adres</label>
+                            <input type="text" id="Apellido_Adress" class="input" placeholder="Apellido Adres">
+                        </div>
                     </div>
 
+                    <div class="input-group-container">
+                        <div class="input-group">
+                            <label for="Entidad_Adress" class="label">Entidad Adres</label>
+                            <input type="text" id="Entidad_Adress" class="input" placeholder="Entidad Adres">
+                        </div>
+                        <div class="input-group archivo">
+                            <label for="pdfAdress" class="label">PDF Adres</label>
+                            <input type="file" id="pdfAdress" class="input" accept=".pdf" placeholder="PDF Adres">
+                            <button class="input boton_pdfAdress">Cargar PDF</button>
+                        </div>
+                    </div>
 
+                    <div class="input-group-container">
+                        <div class="input-group">
+                            <label for="Fecha_Adress" class="label">Fecha Adres</label>
+                            <input type="date" id="Fecha_Adress" class="input" placeholder="Fecha Adres">
+                        </div>
+                        <div class="input-group">
+                            <!-- Espacio para futuros inputs si se necesitan -->
+                        </div>
+                    </div>
 
-
-
-                    <button class=" btn2" id="botonC">Cargar</button>
-
+                    <button class="btn2" id="botonC">Cargar</button>
                 </div>
             </div>
         </div>
-
     </div>
-
-
 </body>
 
 </html>

@@ -30,7 +30,7 @@ signInform.addEventListener('submit', async (e) => {
 
 
     if (values.rol == 'BOT') {
-        window.location.href = "..//Inicio/inicio.html";
+        window.location.href = "../Inicio/inicio.html";
     }
     else {
         aviso('No tienes acceso todavía, comunícate con el administrador', 'error');

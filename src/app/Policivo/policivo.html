@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -26,7 +27,6 @@
                     <p> Adres </p>
                 </a>
             </li>
-
 
             <li>
                 <a href="./policivo.html">
@@ -56,7 +56,6 @@
                 </a>
             </li>
 
-
             <li>
                 <a href="../Producaduria/Producaduria.html">
                     <img src="../assets/Logo_Procuraduria_Colombia.png" alt="logo" class="logo" />
@@ -78,7 +77,12 @@
                 </a>
             </li>
 
-
+            <li>
+                <a href="../Inicio/inicio.html">
+                    <img src="../assets/house.png" alt="logo" class="logo" />
+                    <p> Home </p>
+                </a>
+            </li>
 
             <li id="logout">
                 <img src="../assets/cerrar-sesion.png" alt="logo" class="logo" />
@@ -86,7 +90,6 @@
             </li>
         </ul>
     </div>
-
 
     <header>
         <div class="cajontitulo">
@@ -102,34 +105,35 @@
         <div class="cuadroTexto">
             <div class="valor">
                 <div class="valoresEscribir">
-                    <h1 class="titulo" style="margin-right: 10px;"> Dilegencie la siguiente información: </h1>
+                    <h1 class="titulo" style="margin-right: 10px;"> Diligencie la siguiente información: </h1>
 
-
-                    <!-- Resto de la información de antecedentes policiales -->
-                    <div>
-                        <input type="text" id="Estado_Policivo" class="input" placeholder="Estado_Policivo">
-                        <input type="text" id="Anotacion_Policivo" class="input" placeholder="Anotacion_Policivo">
-
-                        <!-- Entradas para archivos PDF de antecedentes policiales -->
-                        <div class="archivo">
-                            <input type="file" id="PDF_Policivo" class="boton" accept=".pdf" placeholder="PDF_Policivo">
-                            <button class="input" id="boton_PDF_Policivo" style="width: 315px;">PDF_Policivo</button>
+                    <!-- Información de antecedentes policiales -->
+                    <div class="input-group-container">
+                        <div class="input-group">
+                            <label for="Estado_Policivo" class="label">Estado Policivo</label>
+                            <input type="text" id="Estado_Policivo" class="input" placeholder="Estado Policivo">
+                        </div>
+                        <div class="input-group">
+                            <label for="Anotacion_Policivo" class="label">Anotación Policivo</label>
+                            <input type="text" id="Anotacion_Policivo" class="input" placeholder="Anotación Policivo">
                         </div>
                     </div>
 
+                    <!-- Entradas para archivos PDF de antecedentes policiales -->
+                    <div class="input-group-container">
+                        <div class="input-group archivo">
+                            <label for="PDF_Policivo" class="label">PDF Policivo</label>
+                            <input type="file" id="PDF_Policivo" class="input" accept=".pdf">
+                            <button class="input boton_pdfAdress">Cargar PDF</button>
+                        </div>
+                    </div>
 
-
-
-
-                    <button class=" btn2" id="botonC">Cargar</button>
+                    <button class="btn2" id="botonC">Cargar</button>
 
                 </div>
             </div>
         </div>
-
     </div>
-
-
 </body>
 
 </html>
