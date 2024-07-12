@@ -3,32 +3,17 @@
 
 body {
     background-size: 100%;
-    min-width: 100vh;
     min-height: 100vh;
     background: linear-gradient(120deg, #eeeeee 50%, #FEBB2E 40%);
     background-repeat: no-repeat;
     font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
 h1 {
     margin: 0;
     padding: 0;
-}
-
-.diasT {
-    width: 100%;
-    margin: 20px 0 10px 30px;
-    font-family: 'Nunito Sans', sans-serif;
-    font-size: 14pt;
-    font-weight: 400;
-}
-
-.dias {
-    text-align: justify;
-    margin: 0px 0 10px 120px;
-    font-family: 'Nunito Sans', sans-serif;
-    font-size: 16pt;
-    font-weight: 600;
 }
 
 a {
@@ -40,18 +25,13 @@ a {
     align-items: center;
 }
 
-
-
 .opciones {
     width: 20%;
     height: 100%;
     position: fixed;
-    /* Cambiado de "relative" a "fixed" */
     top: 0;
-    /* Fijamos el menú en la parte superior */
     left: 0;
 }
-
 
 .lista-Opciones {
     margin: 100px 0 0 50px;
@@ -61,7 +41,7 @@ li {
     list-style: none;
     height: 30px;
     width: 100%;
-    padding: 20px 0 10px 30px;
+    padding: 20px 0 10px 20px;
     display: flex;
     align-items: center;
     cursor: pointer;
@@ -74,7 +54,6 @@ li:hover {
     border-left: #1157fb 8px solid;
 }
 
-
 li:nth-child(9) {
     background: #bbd0ff;
     color: #000000;
@@ -84,11 +63,8 @@ li:nth-child(9) {
 
 .p {
     margin: 0;
-    /* Ajusta según sea necesario */
     padding: 0;
-    /* Ajusta según sea necesario */
 }
-
 
 .logo {
     width: 40px;
@@ -97,9 +73,7 @@ li:nth-child(9) {
     margin-top: -10px;
 }
 
-
 header {
-    margin-top: 0px;
     height: 50px;
     width: 80%;
     float: right;
@@ -124,7 +98,6 @@ header {
     padding-top: 20px;
     font-size: 25pt;
     font-weight: 600;
-    /*font-style: italic;*/
 }
 
 span {
@@ -139,24 +112,11 @@ span {
 }
 
 .contenido {
-    max-width: 78%;
     width: 80%;
     height: 100%;
     float: right;
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-start;
-}
-
-.cuadro {
-    width: 250px;
-    height: 150px;
-    background: #ffffff;
-    margin: 50px -60px 0 80px;
-    border-radius: 15px;
-    box-shadow: 0px 0px 12px 8px rgba(0, 0, 0, 0.1);
-    font-size: 14pt;
-    font-weight: 700;
 }
 
 .titulo-Opciones {
@@ -175,93 +135,64 @@ span {
     cursor: pointer;
 }
 
-
-/* Aplicar escala solo al cuarto cuadro utilizando :nth-child */
-.cuadroTlinea :hover {
-    transform: scale(1.1);
-    transition: transform 0.3s;
-    /* Agregar transición para suavizar el cambio */
-    cursor: pointer;
-}
-
+.cuadroTlinea:hover,
 .cuadroSlinea .cuadro:nth-child(3):hover {
     transform: scale(1.1);
     transition: transform 0.3s;
-    /* Agregar transición para suavizar el cambio */
+    cursor: pointer;
 }
 
-
 .cuadroTexto {
-    width: 800px;
-    height: auto;
-    /* Cambiado a "auto" para adaptarse al contenido */
+    width: 40%;
+    height: 80vh;
     background: #ffffff;
-    margin: 50px auto;
-    /* Centrado horizontalmente */
+    margin: 50px;
     border-radius: 15px;
     box-shadow: 0px 0px 12px 8px rgba(0, 0, 0, 0.1);
     font-size: 16pt;
     font-weight: 700;
     display: flex;
-    /* Añadido display:flex para el contenedor principal */
     flex-wrap: wrap;
-    /* Habilitar flex-wrap para envolver elementos */
-    justify-content: space-between;
-    /* Espaciado uniforme entre elementos */
-    padding: 0 20px 0 20px;
+    padding: 20px;
+    overflow: hidden; /* Asegura que el contenido no se desborde */
+    box-sizing: border-box; /* Incluye padding y border en el cálculo del ancho y alto */
 }
 
 .valor {
     display: flex;
-    justify-content: flex-start; /* Alinea elementos al inicio */
-    align-items: flex-start; /* Alinea elementos verticalmente al inicio */
-    flex-wrap: wrap; /* Permite que los elementos se muevan a la siguiente línea si no hay espacio */
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
 }
-
-
 
 .valor .titulo {
     margin: 5px 0 30px 0;
     flex: 1 1 100%;
-    /* Para ocupar todo el ancho disponible */
 }
 
-select {
+select,
+.input {
     font-family: 'Poppins', sans-serif;
     font-size: 16px;
     margin: 0 0 20px 0;
     flex: 1 1 calc(50% - 40px);
-    /* Distribuir el ancho de dos elementos en una fila */
 }
-
-.select-wrap,
-.input-wrap {
-    display: flex;
-    flex-direction: column;
-    flex: 1 1 calc(50% - 40px);
-    /* Distribuir el ancho de dos elementos en una fila */
-}
-
 
 .archivo {
     position: relative;
     width: 300px;
-    /* Ancho del botón */
     height: 40px;
-    margin: 0 10px 30px 0px; /* Añade un poco de margen para separarlos */
+    margin: 0 10px 30px 0px;
     float: left;
 }
 
 .archivo input[type="file"] {
     opacity: 0;
-    /* Oculta el input real */
     position: absolute;
     left: 0;
     top: 0;
     width: 290px;
-    /* El mismo ancho que el botón */
     height: 40px;
-    /* Ajusta según la altura de tu botón */
     cursor: pointer;
     padding: 0;
     margin: 0;
@@ -275,9 +206,8 @@ select {
 
 .archivo, .archivo input[type="file"], .archivo button {
     box-sizing: border-box;
-    width: 315px; /* Ancho total, incluyendo padding y borde */
+    width: 315px;
 }
-
 
 .input {
     font-family: 'Poppins', sans-serif;
@@ -287,7 +217,6 @@ select {
     margin-left: 10px;
     font-size: 16px;
     border: 1px solid #cccccc;
-    /* Cambiado border-width y border-style a un solo valor */
     background-color: #ffffff;
     border-radius: 11px;
     box-shadow: 0px 0px 5px rgba(66, 66, 66, 0.75);
@@ -309,11 +238,54 @@ select {
     padding: 10px 30px;
     border: 2px solid #0066cc;
     box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
-    /* Cambiado valores de box-shadow */
     border-radius: 50px;
     transition: 1000ms;
     cursor: pointer;
     font-family: 'Poppins', sans-serif;
     margin: 20px 0px 10px 50px;
-    /* Añadido margen inferior para separar botones */
+}
+
+/* Estilo general de la tabla */
+.table-container {
+    overflow-y: auto; /* Permite el desplazamiento vertical si la tabla es muy alta */
+    margin: 20px 0;
+    height: calc(100% - 40px); /* Ajusta la altura del contenedor de la tabla */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    text-align: left;
+}
+
+table th, table td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+    word-wrap: break-word;
+}
+
+table th {
+    background-color: #f2f2f2;
+    color: #333;
+    font-weight: bold;
+}
+
+table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+table tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Ajuste del contenedor de la tabla para que se vea mejor */
+.cuadroTexto h1 {
+    margin-bottom: 20px;
+}
+
+.fila-contenido {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }

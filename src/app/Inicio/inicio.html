@@ -1,139 +1,139 @@
 <!DOCTYPE html>
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../reset.css" />
     <link rel="stylesheet" href="inicio.css" />
-
     <link href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-minimal@4/minimal.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
-
     <script defer src="../logOut.js" type="module"></script>
     <script defer src="inicio.js" type="module"></script>
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.4/xlsx.full.min.js"></script>
-
+    <title>Estado Robots</title>
 </head>
 
 <body>
-
     <div class="opciones">
         <ul class="lista-Opciones">
-
             <li>
                 <a href="../Adres/policivo.html">
                     <img src="../assets/adres.png" alt="logo" class="logo" />
-                    <p> Adres </p>
+                    <p>Adres</p>
                 </a>
             </li>
-
-
-            <li >
+            <li>
                 <a href="../Policivo/policivo.html">
                     <img src="../assets/police-folder.png" alt="logo" class="logo" />
-                    <p> Policivos </p>
+                    <p>Policivos</p>
                 </a>
             </li>
-
-            <li id="vacantes" >
+            <li id="vacantes">
                 <a href="../Ofac/Ofac.html">
                     <img src="../assets/ofac.png" alt="logo" class="logo" />
-                    <p> Ofac </p>
+                    <p>Ofac</p>
                 </a>
             </li>
-
             <li id="seleccion">
                 <a href="../Contraloria/Contraloria.html">
                     <img src="../assets/contraloria.jpg" alt="logo" class="logo" />
-                    <p> Contraloria </p>
+                    <p>Contraloria</p>
                 </a>
             </li>
-
-            <li id="contratacion" >
+            <li id="contratacion">
                 <a href="../Sisben/Sisben.html">
                     <img src="../assets/sisben.jpg" alt="logo" class="logo" />
-                    <p> Sisben </p>
+                    <p>Sisben</p>
                 </a>
             </li>
-
-
-            <li  >
+            <li>
                 <a href="../Producaduria/Producaduria.html">
                     <img src="../assets/Logo_Procuraduria_Colombia.png" alt="logo" class="logo" />
-                    <p> Producaduria </p>
+                    <p>Producaduria</p>
                 </a>
             </li>
-
-            <li >
+            <li>
                 <a href="../Pension/Pension.html">
                     <img src="../assets/jubilacion.png" alt="logo" class="logo" />
-                    <p> Fondo pension </p>
+                    <p>Fondo pension</p>
                 </a>
             </li>
-
-            <li  >
+            <li>
                 <a href="../Extra/Extra.html">
                     <img src="../assets/mas.png" alt="logo" class="logo" />
-                    <p> Extra </p>
+                    <p>Extra</p>
                 </a>
             </li>
-
             <li>
                 <a href="./inicio.html">
                     <img src="../assets/house.png" alt="logo" class="logo" />
-                    <p> Home </p>
+                    <p>Home</p>
                 </a>
             </li>
-
             <li id="logout">
                 <img src="../assets/cerrar-sesion.png" alt="logo" class="logo" />
                 <p>Cerrar Sesion</p>
             </li>
-            
         </ul>
     </div>
-
 
     <header>
         <div class="cajontitulo">
             <h1 class="titulo">Bienvenido</h1>
         </div>
         <div class="perfil">
-            <h1 clas class="titulo">Hola, <span id="username"></span></h1>
+            <h1 class="titulo">Hola, <span id="username"></span></h1>
             <h1 id="perfil" class="titulo"></h1>
         </div>
     </header>
 
     <div class="contenido">
-        <div class="cuadroTexto">
-            <div class="valor">
-                <div class="valoresEscribir">
-                    <h1 class="titulo" style="margin-right: 10px;"> Dilegencie la siguiente información: </h1>
+        <div class="fila-contenido">
+            <div class="cuadroTexto">
+                <h1 class="titulo">Estados de Robots</h1>
+                <div class="table-container">
+                    <table id="estadoRobotsTable">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Cédula</th>
+                                <th>Tipo</th>
+                                <th>Adres</th>
+                                <th>Ofac</th>
+                                <th>Contraloria</th>
+                                <th>Sisben</th>
+                                <th>Producaduria</th>
+                                <th>Fondo Pensión</th>
+                                <th>Unión</th>
+                                <th>Fecha</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Aquí se insertarán las filas de la tabla -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
 
-                    <!-- Resto de la información de dirección -->
-                    <div>
-                        <input type="text" id="Cedula" class="input" placeholder="Numero Cedula">
-                        <!-- Tipo de documento -->
-                        <select id="Tipo_Documento" class="input">
-                            <option value="CC">Cedula</option>
-                            <option value="CE">Cedula de extranjeria</option>
-                            <option value="P">Pasaporte</option>
-
-                        </select>
-
+            <div class="cuadroTexto">
+                <div class="valor">
+                    <div class="valoresEscribir">
+                        <h1 class="titulo" style="margin-right: 10px;"> Dilegencie la siguiente información: </h1>
+                        <div>
+                            <input type="text" id="Cedula" class="input" placeholder="Numero Cedula">
+                            <select id="Tipo_Documento" class="input">
+                                <option value="CC">Cedula</option>
+                                <option value="CE">Cedula de extranjeria</option>
+                                <option value="P">Pasaporte</option>
+                            </select>
+                        </div>
+                        <button class="btn2" id="botonC">Cargar</button>
                     </div>
-
-
-                    <button class=" btn2" id="botonC">Cargar</button>
-
-
                 </div>
             </div>
         </div>
-
     </div>
-
-
 </body>
 
 </html>

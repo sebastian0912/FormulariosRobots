@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -26,7 +27,6 @@
                     <p> Adres </p>
                 </a>
             </li>
-
 
             <li>
                 <a href="../Policivo/policivo.html">
@@ -56,7 +56,6 @@
                 </a>
             </li>
 
-
             <li>
                 <a href="../Producaduria/Producaduria.html">
                     <img src="../assets/Logo_Procuraduria_Colombia.png" alt="logo" class="logo" />
@@ -85,8 +84,6 @@
                 </a>
             </li>
 
-
-
             <li id="logout">
                 <img src="../assets/cerrar-sesion.png" alt="logo" class="logo" />
                 <p>Cerrar Sesion</p>
@@ -94,13 +91,12 @@
         </ul>
     </div>
 
-
     <header>
         <div class="cajontitulo">
             <h1 class="titulo">Bienvenido</h1>
         </div>
         <div class="perfil">
-            <h1 clas class="titulo">Hola, <span id="username"></span></h1>
+            <h1 class="titulo">Hola, <span id="username"></span></h1>
             <h1 id="perfil" class="titulo"></h1>
         </div>
     </header>
@@ -109,37 +105,45 @@
         <div class="cuadroTexto">
             <div class="valor">
                 <div class="valoresEscribir">
-                    <h1 class="titulo" style="margin-right: 10px;"> Dilegencie la siguiente información: </h1>
+                    <h1 class="titulo" style="margin-right: 10px;"> Diligencie la siguiente información: </h1>
 
-
-                    <!-- Resto de la información de Sisben -->
-                    <div>
-                        <input type="text" id="Estado_Sisben" class="input" placeholder="Estado_Sisben">
-                        <input type="text" id="Tipo_Sisben" class="input" placeholder="Tipo_Sisben">
-
-                        <!-- Entradas para archivos PDF de Sisben -->
-                        <div class="archivo">
-                            <input type="file" id="PDF_Sisben" class="boton" accept=".pdf" placeholder="PDF_Sisben">
-                            <button class="input" id="boton_PDF_Sisben" style="width: 315px;">PDF_Sisben</button>
+                    <!-- Información de Sisben -->
+                    <div class="input-group-container">
+                        <div class="input-group">
+                            <label for="Estado_Sisben" class="label">Estado Sisben</label>
+                            <input type="text" id="Estado_Sisben" class="input" placeholder="Estado Sisben">
                         </div>
-
-                        <input type="date" id="Fecha_Sisben" class="input" placeholder="Fecha_Sisben">
+                        <div class="input-group">
+                            <label for="Tipo_Sisben" class="label">Tipo Sisben</label>
+                            <input type="text" id="Tipo_Sisben" class="input" placeholder="Tipo Sisben">
+                        </div>
                     </div>
 
+                    <!-- Entradas para archivos PDF de Sisben -->
+                    <div class="input-group-container">
+                        <div class="input-group archivo">
+                            <label for="PDF_Sisben" class="label">PDF Sisben</label>
+                            <input type="file" id="PDF_Sisben" class="input" accept=".pdf">
+                            <button class="input boton_pdfAdress">Cargar PDF</button>
+                        </div>
+                    </div>
 
+                    <div class="input-group-container">
+                        <div class="input-group">
+                            <label for="Fecha_Sisben" class="label">Fecha Sisben</label>
+                            <input type="date" id="Fecha_Sisben" class="input" placeholder="Fecha Sisben">
+                        </div>
+                        <div class="input-group">
+                            <!-- Espacio para futuros inputs si se necesitan -->
+                        </div>
+                    </div>
 
-
-
-
-                    <button class=" btn2" id="botonC">Cargar</button>
+                    <button class="btn2" id="botonC">Cargar</button>
 
                 </div>
             </div>
         </div>
-
     </div>
-
-
 </body>
 
 </html>

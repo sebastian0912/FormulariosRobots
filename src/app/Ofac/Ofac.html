@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -26,7 +27,6 @@
                     <p> Adres </p>
                 </a>
             </li>
-
 
             <li>
                 <a href="../Policivo/policivo.html">
@@ -56,7 +56,6 @@
                 </a>
             </li>
 
-
             <li>
                 <a href="../Producaduria/Producaduria.html">
                     <img src="../assets/Logo_Procuraduria_Colombia.png" alt="logo" class="logo" />
@@ -85,8 +84,6 @@
                 </a>
             </li>
 
-
-
             <li id="logout">
                 <img src="../assets/cerrar-sesion.png" alt="logo" class="logo" />
                 <p>Cerrar Sesion</p>
@@ -94,13 +91,12 @@
         </ul>
     </div>
 
-
     <header>
         <div class="cajontitulo">
             <h1 class="titulo">Bienvenido</h1>
         </div>
         <div class="perfil">
-            <h1 clas class="titulo">Hola, <span id="username"></span></h1>
+            <h1 class="titulo">Hola, <span id="username"></span></h1>
             <h1 id="perfil" class="titulo"></h1>
         </div>
     </header>
@@ -109,34 +105,35 @@
         <div class="cuadroTexto">
             <div class="valor">
                 <div class="valoresEscribir">
-                    <h1 class="titulo" style="margin-right: 10px;"> Dilegencie la siguiente información: </h1>
+                    <h1 class="titulo" style="margin-right: 10px;"> Diligencie la siguiente información: </h1>
 
-                    <!-- Resto de la información de la verificación OFAC -->
-                    <div>
-                        <input type="text" id="Estado_OFAC" class="input" placeholder="Estado_OFAC">
-                        <input type="text" id="Anotacion_OFAC" class="input" placeholder="Anotacion_OFAC">
-
-                        <!-- Entradas para archivos PDF de la verificación OFAC -->
-                        <div class="archivo">
-                            <input type="file" id="PDF_OFAC" class="boton" accept=".pdf" placeholder="PDF_OFAC">
-                            <button class="input" id="boton_PDF_OFAC" style="width: 315px;">PDF_OFAC</button>
+                    <!-- Información de verificación OFAC -->
+                    <div class="input-group-container">
+                        <div class="input-group">
+                            <label for="Estado_OFAC" class="label">Estado OFAC</label>
+                            <input type="text" id="Estado_OFAC" class="input" placeholder="Estado OFAC">
+                        </div>
+                        <div class="input-group">
+                            <label for="Anotacion_OFAC" class="label">Anotación OFAC</label>
+                            <input type="text" id="Anotacion_OFAC" class="input" placeholder="Anotación OFAC">
                         </div>
                     </div>
 
+                    <!-- Entradas para archivos PDF de la verificación OFAC -->
+                    <div class="input-group-container">
+                        <div class="input-group archivo">
+                            <label for="PDF_OFAC" class="label">PDF OFAC</label>
+                            <input type="file" id="PDF_OFAC" class="input" accept=".pdf">
+                            <button class="input boton_pdfAdress">Cargar PDF</button>
+                        </div>
+                    </div>
 
-
-
-
-
-                    <button class=" btn2" id="botonC">Cargar</button>
+                    <button class="btn2" id="botonC">Cargar</button>
 
                 </div>
             </div>
         </div>
-
     </div>
-
-
 </body>
 
 </html>

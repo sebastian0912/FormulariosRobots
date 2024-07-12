@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -26,7 +27,6 @@
                     <p> Adres </p>
                 </a>
             </li>
-
 
             <li>
                 <a href="../Policivo/policivo.html">
@@ -56,7 +56,6 @@
                 </a>
             </li>
 
-
             <li>
                 <a href="../Producaduria/Producaduria.html">
                     <img src="../assets/Logo_Procuraduria_Colombia.png" alt="logo" class="logo" />
@@ -85,8 +84,6 @@
                 </a>
             </li>
 
-
-
             <li id="logout">
                 <img src="../assets/cerrar-sesion.png" alt="logo" class="logo" />
                 <p>Cerrar Sesion</p>
@@ -94,13 +91,12 @@
         </ul>
     </div>
 
-
     <header>
         <div class="cajontitulo">
             <h1 class="titulo">Bienvenido</h1>
         </div>
         <div class="perfil">
-            <h1 clas class="titulo">Hola, <span id="username"></span></h1>
+            <h1 class="titulo">Hola, <span id="username"></span></h1>
             <h1 id="perfil" class="titulo"></h1>
         </div>
     </header>
@@ -109,39 +105,38 @@
         <div class="cuadroTexto">
             <div class="valor">
                 <div class="valoresEscribir">
-                    <h1 class="titulo" style="margin-right: 10px;"> Dilegencie la siguiente información: </h1>
+                    <h1 class="titulo" style="margin-right: 10px;"> Diligencie la siguiente información: </h1>
 
-
-                    <!-- Resto de la información del Fondo de Pensiones -->
-                    <div>
-                        <input type="text" id="Estado_FondoPension" class="input" placeholder="Estado_FondoPension">
-                        <input type="text" id="Entidad_FondoPension" class="input" placeholder="Entidad_FondoPension">
-
-                        <!-- Entradas para archivos PDF del Fondo de Pensiones -->
-                        <div class="archivo">
-                            <input type="file" id="PDF_FondoPension" class="boton" accept=".pdf"
-                                placeholder="PDF_FondoPension">
-                            <button class="input" id="boton_PDF_FondoPension"
-                                style="width: 315px;">PDF_FondoPension</button>
+                    <!-- Información del Fondo de Pensiones -->
+                    <div class="input-group-container">
+                        <div class="input-group">
+                            <label for="Estado_FondoPension" class="label">Estado FondoPension</label>
+                            <input type="text" id="Estado_FondoPension" class="input" placeholder="Estado FondoPension">
                         </div>
-
-                        <input type="date" id="Fecha_FondoPension" class="input" placeholder="Fecha_FondoPension">
+                        <div class="input-group">
+                            <label for="Entidad_FondoPension" class="label">Entidad FondoPension</label>
+                            <input type="text" id="Entidad_FondoPension" class="input" placeholder="Entidad FondoPension">
+                        </div>
                     </div>
 
+                    <div class="input-group-container">
+                        <div class="input-group archivo">
+                            <label for="PDF_FondoPension" class="label">PDF FondoPension</label>
+                            <input type="file" id="PDF_FondoPension" class="input" accept=".pdf">
+                            <button class="input boton_pdfAdress">Cargar PDF</button>
+                        </div>
+                        <div class="input-group">
+                            <label for="Fecha_FondoPension" class="label">Fecha FondoPension</label>
+                            <input type="date" id="Fecha_FondoPension" class="input" placeholder="Fecha FondoPension">
+                        </div>
+                    </div>
 
-
-
-
-
-                    <button class=" btn2" id="botonC">Cargar</button>
+                    <button class="btn2" id="botonC">Cargar</button>
 
                 </div>
             </div>
         </div>
-
     </div>
-
-
 </body>
 
 </html>

@@ -40,18 +40,13 @@ a {
     align-items: center;
 }
 
-
-
 .opciones {
     width: 20%;
     height: 100%;
     position: fixed;
-    /* Cambiado de "relative" a "fixed" */
     top: 0;
-    /* Fijamos el menú en la parte superior */
     left: 0;
 }
-
 
 .lista-Opciones {
     margin: 100px 0 0 50px;
@@ -74,7 +69,6 @@ li:hover {
     border-left: #1157fb 8px solid;
 }
 
-
 li:nth-child(8) {
     background: #bbd0ff;
     color: #000000;
@@ -84,11 +78,8 @@ li:nth-child(8) {
 
 .p {
     margin: 0;
-    /* Ajusta según sea necesario */
     padding: 0;
-    /* Ajusta según sea necesario */
 }
-
 
 .logo {
     width: 40px;
@@ -96,7 +87,6 @@ li:nth-child(8) {
     padding: 0 10px 0 0;
     margin-top: -10px;
 }
-
 
 header {
     margin-top: 0px;
@@ -124,7 +114,6 @@ header {
     padding-top: 20px;
     font-size: 25pt;
     font-weight: 600;
-    /*font-style: italic;*/
 }
 
 span {
@@ -175,133 +164,112 @@ span {
     cursor: pointer;
 }
 
-
-/* Aplicar escala solo al cuarto cuadro utilizando :nth-child */
 .cuadroTlinea :hover {
     transform: scale(1.1);
     transition: transform 0.3s;
-    /* Agregar transición para suavizar el cambio */
     cursor: pointer;
 }
 
 .cuadroSlinea .cuadro:nth-child(3):hover {
     transform: scale(1.1);
     transition: transform 0.3s;
-    /* Agregar transición para suavizar el cambio */
 }
-
 
 .cuadroTexto {
     width: 800px;
     height: auto;
-    /* Cambiado a "auto" para adaptarse al contenido */
     background: #ffffff;
     margin: 50px auto;
-    /* Centrado horizontalmente */
     border-radius: 15px;
     box-shadow: 0px 0px 12px 8px rgba(0, 0, 0, 0.1);
     font-size: 16pt;
     font-weight: 700;
     display: flex;
-    /* Añadido display:flex para el contenedor principal */
     flex-wrap: wrap;
-    /* Habilitar flex-wrap para envolver elementos */
     justify-content: space-between;
-    /* Espaciado uniforme entre elementos */
-    padding: 0 20px 0 20px;
+    padding: 20px;
 }
 
 .valor {
     display: flex;
-    justify-content: flex-start; /* Alinea elementos al inicio */
-    align-items: flex-start; /* Alinea elementos verticalmente al inicio */
-    flex-wrap: wrap; /* Permite que los elementos se muevan a la siguiente línea si no hay espacio */
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
 }
-
-
 
 .valor .titulo {
     margin: 5px 0 30px 0;
     flex: 1 1 100%;
-    /* Para ocupar todo el ancho disponible */
 }
 
-select {
-    font-family: 'Poppins', sans-serif;
-    font-size: 16px;
-    margin: 0 0 20px 0;
-    flex: 1 1 calc(50% - 40px);
-    /* Distribuir el ancho de dos elementos en una fila */
-}
-
-.select-wrap,
-.input-wrap {
+.input-group-container {
     display: flex;
-    flex-direction: column;
-    flex: 1 1 calc(50% - 40px);
-    /* Distribuir el ancho de dos elementos en una fila */
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 20px;
 }
 
+.input-group {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex: 1;
+    margin-right: 20px;
+}
+
+.input-group:last-child {
+    margin-right: 0;
+}
+
+.input-group label {
+    font-size: 14px;
+    font-weight: 600;
+    margin-right: 10px;
+    color: #333333;
+    width: 100px;
+}
+
+.input-group .input {
+    font-family: 'Poppins', sans-serif;
+    width: calc(100% - 110px);
+    height: 40px;
+    padding: 5px;
+    font-size: 16px;
+    border: 1px solid #cccccc;
+    background-color: #ffffff;
+    border-radius: 11px;
+    box-shadow: 0px 0px 5px rgba(66, 66, 66, 0.75);
+}
+
+.input-group .input:focus {
+    outline: none;
+}
 
 .archivo {
     position: relative;
-    width: 300px;
-    /* Ancho del botón */
-    height: 40px;
-    margin: 0 10px 30px 0px; /* Añade un poco de margen para separarlos */
-    float: left;
+    margin-bottom: 20px;
 }
 
 .archivo input[type="file"] {
     opacity: 0;
-    /* Oculta el input real */
     position: absolute;
     left: 0;
     top: 0;
-    width: 290px;
-    /* El mismo ancho que el botón */
-    height: 40px;
-    /* Ajusta según la altura de tu botón */
+    width: 100%;
+    height: 100%;
     cursor: pointer;
-    padding: 0;
-    margin: 0;
 }
 
 .archivo .input {
-    width: 315px;
-    height: 50px;
-    cursor: pointer;
-}
-
-.archivo, .archivo input[type="file"], .archivo button {
-    box-sizing: border-box;
-    width: 315px; /* Ancho total, incluyendo padding y borde */
-}
-
-
-.input {
-    font-family: 'Poppins', sans-serif;
-    width: 300px;
+    width: 100%;
     height: 40px;
-    padding: 5px;
-    margin-left: 10px;
-    font-size: 16px;
-    border: 1px solid #cccccc;
-    /* Cambiado border-width y border-style a un solo valor */
-    background-color: #ffffff;
-    border-radius: 11px;
-    box-shadow: 0px 0px 5px rgba(66, 66, 66, 0.75);
-    margin-bottom: 20px;
-}
-
-.input:focus {
-    outline: none;
+    cursor: pointer;
 }
 
 .btn,
 .btn2 {
     height: 50px;
-    width: 85%;
+    width: 100%;
     font-weight: 600;
     font-size: 16px;
     color: #fff;
@@ -309,11 +277,9 @@ select {
     padding: 10px 30px;
     border: 2px solid #0066cc;
     box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
-    /* Cambiado valores de box-shadow */
     border-radius: 50px;
     transition: 1000ms;
     cursor: pointer;
     font-family: 'Poppins', sans-serif;
-    margin: 20px 0px 10px 50px;
-    /* Añadido margen inferior para separar botones */
+    margin: 20px 0px 10px 0;
 }
